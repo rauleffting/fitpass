@@ -10,6 +10,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
     "lint": "eslint src --ext .ts --fix",
     "commitlint": "commitlint --edit",
     "prepare": "husky install"
@@ -23,6 +24,7 @@
     "@types/bcryptjs": "2.4.2",
     "@types/node": "20.4.10",
     "@vitest/coverage-v8": "0.34.2",
+    "@vitest/ui": "0.34.2",
     "eslint": "8.47.0",
     "husky": "8.0.3",
     "prisma": "5.1.1",
