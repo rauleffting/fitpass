@@ -19,7 +19,6 @@ describe('Get User Profile Use Case', () => {
       email: 'johndoe@example.com',
       password_hash: await hash('123456', 6),
     })
-    console.log(createdUser)
 
     const { user } = await sut.execute({
       userId: createdUser.id,
@@ -30,7 +29,7 @@ describe('Get User Profile Use Case', () => {
   })
 
   it('should not be able to get user profile with wrong id', async () => {
-    expect(() =>
+    await expect(() =>
       sut.execute({
         userId: 'non-existing-id',
       }),
